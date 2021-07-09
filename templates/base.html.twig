@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>{% block title %}BookLand{% endblock %}</title>
+{% block stylesheet %}
+     
+		<!-- Bootstrap CSS -->
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+     <!--- for footer -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="{{asset('css/base.css')}}">
+  <!--- for footer -->
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]-->
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<!--[endif]-->
+		{% endblock %}
+  </head>
+    <body>
+
+<nav class="navbar navbar-expand-lg navbar-light " style="background-color: #393d42 ;">
+  <div class="container-fluid ">
+    <a class="navbar-brand"  href="{{ path('home')}}"><h2><span>Book</span>Land</h2></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarNavDropdown">
+      <ul class="navbar-nav ">
+        <li class="nav-item" style=" margin-left:150px ;font-family:cursive ;font-size: 18px;">
+          <a class="nav-link active"  style="color: white;"  href="{{ path('home')}}">Home</a>
+        </li>
+        <li class="nav-item" style="font-family:cursive;font-size: 18px; margin-left:40px ;">
+          <a class="nav-link" href="#" style="color: white;" >About</a>
+        </li>
+        <li class="nav-item"  style="font-family: cursive;font-size: 18px; margin-left:40px;">
+          <a class="nav-link"  style="color: white;">Best Seller</a>
+        </li>
+        <li class="nav-item"  style="font-family: cursive;font-size: 18px; margin-left:40px;">
+          <a class="nav-link"  href="{{ path('books')}}" style="color: white;">Books</a>
+        </li>
+        <li class="nav-item"  style="font-family: cursive;font-size: 18px; margin-left:40px;">
+          <a class="nav-link" href="#" style="color: white;">Author</a>
+        </li>
+        <li class="nav-item" style="font-family: cursive;font-size: 18px; margin-left:40px; margin-right:40px;">
+          <a class="nav-link" href="#"style="color: white;"> <i class="fa fa-sign-in"></i> Sign in</a>
+        </li>
+        </ul>
+        <form class="d-flex">
+        <input class="form-control me-2" type="search" name="title"placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="search">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+		<!-- jQuery -->
+		<script src="//code.jquery.com/jquery.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+ 		<script src="Hello World"></script>
+       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+     <!-- jQuery -->
+
+      
+     
+{% block body %}
+   
+
+{% endblock %}
+
+	</body>
+ 
+  <footer class="footer-distributed">
+     
+		<div class="footer-left">
+ 
+		<h3>Book<span>Land</span></h3>
+ 
+		<p class="footer-links">
+		<a  href="{{ path('home')}}">Home</a>
+	·
+		<a href="#">About</a>
+	·
+		<a href="#">Best Seller</a>
+	·
+		<a href="{{ path('books')}}">Books</a>
+	·
+		<a href="#">Author</a>
+	·
+		<a href="#">Contact</a>
+		</p>
+ 
+		
+		</div>
+ 
+		<div class="footer-center">
+ 
+		<div>
+		<i class="fa fa-map-marker"></i>
+		<p><span>Yasser Arafet</span> Sousse, Tunisia</p>
+		</div>
+ 
+		<div>
+		<i class="fa fa-phone"></i>
+		<p>+216 278 23456</p>
+		</div>
+ 
+		<div>
+		<i class="fa fa-envelope"></i>
+		<p><a href="amalmzoughi1999@gmail.com">amalmzoughi1999@gmail.com</a></p>
+		</div>
+ 
+		</div>
+ 
+		<div class="footer-right">
+ 
+		<div class="footer-icons">
+ 
+		<a href="https://www.facebook.com/amoula.mzoughi.75/"><i class="fa fa-facebook"></i></a>
+		<a href="#"><i class="fa fa-twitter"></i></a>
+		<a href="#"><i class="fa fa-linkedin"></i></a>
+		<a href="#"><i class="fa fa-github"></i></a>
+ 
+		</div>
+ 
+		</div>
+ 
+   
+   
+  </footer>
+</html>

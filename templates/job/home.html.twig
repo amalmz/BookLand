@@ -1,0 +1,37 @@
+{% extends "base.html.twig" %}
+{% block title %}
+   {{parent()}} | Home
+  
+{% endblock %}
+{% block stylesheet %}
+ <link rel="stylesheet" type="text/css" href="{{asset('css/home.css')}}">
+ {{parent()}}
+
+{% endblock %}
+
+
+{% block body %}
+   <div class="row" style="background-image:url('../images/books6.jpg') ; height: 500px;">
+       <h4 style=" font-size: 70px;">BookLand</h4>
+       <p style="color: white; font-size: 50px; padding-bottom: 300px;
+    margin-left: 10px;"> where all your favorite books can be found .</p>
+   </div>
+   <div class="row" style="margin-top: 80px ; background-color: #8080801c;" >
+       <div class="col-md-6" >
+          <img src="../images/reading.jpg" alt="" style="height: 500px; margin-left: 100px;">
+       </div>
+        <div class="col-md-6"style=" margin-top: 150px;">
+        <h5 style="font-size: 60px; ">About Us</h5>
+        <p>
+        Bookshop is an online bookstore with a mission to financially support local, independent bookstores. <br>
+We believe that bookstores are essential to a healthy culture. They’re where authors can connect with readers, where we discover new writers, where children get hooked on the thrill of reading that can last a lifetime. <br> They’re also anchors for our downtowns and communities.
+As more and more people buy their books online, we wanted to create an easy, convenient way for you to get your books and support bookstores at the same time.
+        
+        </p>
+        
+        </div>
+   
+   </div>
+  
+     
+{% endblock %}

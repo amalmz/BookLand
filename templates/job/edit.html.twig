@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+ {% block title %}
+{{parent()}} 
+
+ {% endblock %}
+ {% block stylesheet %}
+{{parent()}}
+
+
+ {% endblock %}
+
+ {% block body %}
+<h1> Edit a Book</h1>
+{{include("job/form.html.twig") }}
+
+ {% endblock %}

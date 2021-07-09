@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %}
+{% form_theme form 'bootstrap_4_layout.html.twig'%}
+{% block stylesheet %}
+ <link rel="stylesheet" type="text/css" href="{{asset('css/home.css')}}">
+ {{parent()}}
+
+{% endblock %}
+
+
+{% block body %}
+<h1> Add a Book</h1>
+{{include("job/form.html.twig") }}
+
+
+ {% endblock %}

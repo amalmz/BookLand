@@ -1,0 +1,39 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+   {{parent()}} | Admin
+  
+{% endblock %}
+
+{% block stylesheet %}
+ {{parent()}}
+
+{% endblock %}
+{% block body %}
+    <div class="container mt-4">
+        <h1>Our Books</h1>
+        <table class="table table-striped">
+              <thread>
+               <tr>
+                  <th>Title</th>
+                  <th>Actions</th>
+               </tr>
+              </thead>
+              {% for book in books %}
+              <tbody>
+                 <tr>
+                   <td>{{book.title}}</td>
+                   <td>
+                   <a href="{{path('edit',{'id': book.id})}}"  class="btn btn-primary">Edit </a>
+                   <a href="{{path('delete',{'id': book.id})}}"  class="btn btn-primary"> Delete </a>
+                    </td>
+                 </tr>
+                 {% endfor %}
+              </tbody>
+
+        </table>
+           <a href="{{path('add')}}" class="btn btn-primary"> Create a new Book </a>
+    </div>
+
+
+ {% endblock %}
